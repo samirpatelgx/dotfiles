@@ -23,7 +23,7 @@ set smartcase
 " turn on line numbering
 set number
 
-set backup
+"set backup
 " set bex=SOMETHING
 
 set lbr
@@ -62,7 +62,7 @@ endif
 set nocompatible
 filetype off
 
-set cursorline
+"set cursorline
 
 
 let g:pymode_python = 'python3'
