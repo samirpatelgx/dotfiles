@@ -65,12 +65,12 @@ filetype off
 "set cursorline
 
 
-let g:pymode_python = 'python3'
+"let g:pymode_python = 'python3'
 
 call plug#begin("~/.vim/bundle")
 Plug 'junegunn/vim-plug'
 Plug 'scrooloose/nerdTree' "Documents tree
-Plug 'davidhalter/jedi-vim' "python autocompletion
+"Plug 'davidhalter/jedi-vim' "python autocompletion
 Plug 'tpope/vim-fugitive' "git integration
 Plug 'scrooloose/syntastic' "code syntaxis
 Plug 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis...
@@ -81,6 +81,7 @@ Plug 'yggdroot/indentline' "Show indent lines (useful for loops)
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 
