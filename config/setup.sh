@@ -6,7 +6,7 @@ if [ "$#" -ge 1 ]; then
   slStatusTemp=0
   slStatus=0
 
-  sudo apt install tmux
+  sudo apt install curl tmux python3 -y
 
   echo "Initiating git clone of tmux dependent repositories"
   
@@ -35,6 +35,7 @@ if [ "$#" -ge 1 ]; then
 else
   echo "Argument requires a home directory: ./startup.sh <home directory>"
   echo "Example: startup.sh /home/samirpatelgx"
+  exit 1
 fi
 
-
+echo "Next, go into vim and do :PlugInstall to install all of its plugins based on the .vimrc configuration"

@@ -122,7 +122,10 @@ PATH="$PATH:$HOME/drivers"
 export HISTSIZE=-1
 export HISTFILESIZE=-1
 export HISTFILE=~/.bash_eternal_history
-export HISTTIMEFORMAT="[%F %T]"
+export HISTTIMEFORMAT="[%F %T] "
 
 xrandr --output $(xrandr | grep -w connected | awk '{ print $1 }') --brightness .75
 
+export HISTTIMEFORMAT="[%F %T] "
+
+export PROMPT_COMMAND='history -a; history -r'
