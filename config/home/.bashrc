@@ -15,9 +15,6 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -119,3 +116,13 @@ fi
 
 PATH="$PATH:$HOME/bin"
 PATH="$PATH:$HOME/drivers"
+
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=-1
+export HISTFILESIZE=-1
+export HISTFILE=~/.bash_eternal_history
+export HISTTIMEFORMAT="[%F %T]"
+
+xrandr --output $(xrandr | grep -w connected | awk '{ print $1 }') --brightness .75
+
