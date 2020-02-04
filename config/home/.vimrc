@@ -74,7 +74,7 @@ Plug 'scrooloose/nerdTree' "Documents tree
 Plug 'tpope/vim-fugitive' "git integration
 Plug 'scrooloose/syntastic' "code syntaxis
 Plug 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis...
-Plug 'yggdroot/indentline' "Show indent lines (useful for loops)
+"Plug 'yggdroot/indentline' "Show indent lines (useful for loops)
 "Plug 'tmhedberg/SimpylFold' "Python folding
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
@@ -84,4 +84,4 @@ Plug 'chriskempson/base16-vim'
 Plug 'leafgarland/typescript-vim'
 call plug#end()
 
-
+"let g:indentLine_newVersion=0
