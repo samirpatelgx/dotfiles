@@ -3,7 +3,7 @@
 
 if [ "$#" -ge 1 ]; then
 
-	dotFilesDir=$(dirname ${BASH_SOURCE[0]})
+	dotFilesDir=$(dirname "$(realpath $0)")
 
   slStatusTemp=0
   slStatus=0
