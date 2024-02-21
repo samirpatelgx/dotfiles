@@ -1,0 +1,1 @@
+['firefox_firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'google-chrome.desktop', 'org.gnome.gedit.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'discord_discord.desktop']

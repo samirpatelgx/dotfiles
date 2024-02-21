@@ -33,6 +33,7 @@ nvm install node
 # Install discord
 sudo snap install discord
 
+gsettings set org.gnome.shell favorite-apps "$(cat favorite-apps.txt)"
 
 
 #/home/$USER/dotfiles/config/setup.sh
