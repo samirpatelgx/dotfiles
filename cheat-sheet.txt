@@ -1,0 +1,94 @@
+When in terminal:
+copy: hold shift + ctrl + c to copy
+paste: hold shift + ctrl + v to paste
+
+linux:
+key terms:
+~ represents the home directory location of the user. In this instance ~ would represent /home/sitemills-user
+ex: vim  ~/projects/cheat-sheet.txt
+Commands:
+sudo <command here> - sudo represents "super user do". To run various commands, you'll need administration access, similar to windows and it will prompt you for a password.
+ex: sudo vim /etc/hosts - The file /etc/hosts itself is irrelevant here for our purpose in understanding the sudo command works but understand that it's a file that requires elevated privilege which is why it's used in this example. Without running sudo, this file won't be able to open in vim.
+cd ~/project/ - This command brings you into the project folder.
+cd ..
+cd ~/
+cancel out of the current command: ctrl + c together - remember this isn't copy like in Windows.
+To copy you would have to use ctrl + shift + c and highlight what needs to be copied.
+pwd - This command shows the current location of where you are in the terminal window
+ls - List all the files and directories in the current terminal window
+ls -la - List all the files and directories in the current terminal window, in list format and list all of them.
+**Important key feature when using cd, vim or most other linux commands: tab** - This allows auto completion of the word after the command
+Ex: vim ~/pro and then press the <tab key> and it should autocomplete to ~/project
+Ex: cd ~/proj + <tab key> and then type in /chea + <tab key> - vim This should autocomplete ~/projects/cheat-sheet.txt
+mkdir ~/projects/my-project - makes a directory my-project inside of ~/projects
+mkdir -p ~/projects/my-project/react-project/react-components/random-component - Makes a long structure of react directories without having to define each one individually.
+cat ~/projects/cheat-sheet.txt - This will output everything that is in cheat-sheet.txt to the current window
+cat ~/projects/cheat-sheet.txt | xclip -sel c - This will copy all the contents in cheat-sheet.txt to the clipboard. You can use this to paste somewhere else. Replace the cheat-sheet.txt file with something else entirely if you prefer.
+touch ~/projects/test-text.txt - This will create a empty test-txt.txt file
+sudo apt get update - This will update your Ubuntu repository for downloading newer applications.
+sudo apt get install <application name here> - Fill <application name here> with whatever application you'd like to install. Better way to use this command is to just ask chatgpt on how to download whatever you need and copy that into terminal.
+rm: rm ~/projects/test + <tab> + <enter> - Will delete that file.
+rm: rm -r ~/project/my-project/react-project - Removes a directory. Be careful as there is no trash bin to recover this. Once removed, it's gone! The -r is recursive so it will do directories too and not just files
+There are very many more commands but these are the bare minimum to get you by in Linux. As you learn new commands, feel free to add to this list.
+Other important commands that you can look into: find(searching for files), grep(searching through text), curl(downloading content or making GET/POST requests),ssh(ssh connecting),cp(copies content), mv(similar to cp but moves instead of copy)
+Just be careful because there is no undo command.
+The most powerful thing about Linux is that you can automate a lot of Operating System tasks by combining these commands and/or automating it even further using bash scripts. 
+
+git:
+Create a github account and then do git login to login.
+git status - Shows the status of changes in the current directory with git initialized.
+git add . - This adds all the unchanged files to git so they're ready to be "commited" using git commit -m "Updates made"
+git commit -m "<commit message here" - This saves the git to history.
+git log - You can see all commited git changes in history.
+git push - Pushes your committed changes to GitHub so it can be shared with colleagues.
+git pull - Pull the latest changes down from GitHub.
+git branch - See what branch you're currently on
+git checkout <name of branch> - Change the branch to that specific branch. 
+Ex: 
+git checkout dev
+git checkout feature-new-dashboard
+
+
+
+Sitemills:
+cd ~/proj + <tab key> + sit + <tab key> + sit + <tab key>
+This should iterate you all the way to ~/projects/sitemills/sitemills
+ls -la - See the directory structure for sitemills
+cd server - Go into the server directory
+./runAll.sh - A capital A in ./runAll.sh. Use tab completion next time ./run + <tab key>. This command should start all the services and launch Sitemills. It will take a couple of minutes to build, compile etc... 
+Once the build/compilation is complete, you can visit Sitemills locally in a web browser(This won't be live on the internet but locally on your laptop)
+Go to chrome or firefox and put this into the address bar: 127.0.0.1:8080
+Once everything is deployed and you want to turn off the services to build up on it, you can run:
+ctrl + c to close the current running services and then use the following to cleanup:
+./killAll.sh - This command will kill all processes running Sitemills. Most of the code is in the server directory within ~/projects/sitemills/sitemills
+
+tmux: (Optional but a powerful program to have multiple windows open and save windows sessions). This is something that I use daily and can't do without but if you're thinking about working in visual studio code and not vim or less in terminal for now, you can skip this. This is very useful if you use primarily vim as an editor.
+Tmux is already configured to use ctrl + a as the primary keys to control keyboard shortcuts. 
+The default is usually ctrl + b but it was changed to ctrl + a to simplify it a bit more.
+
+vim: 
+(optional). Feel free to skip to Linux if you don't want to use vim and rather just use a GUI like notepad++ or Visual Studio Code(VSC)
+Various plugins for vim have been installed for your convenience if you do choose to go this route.
+ex to open a text file: /home/sitemills-user/projects/cheat-sheet.txt
+ctrl + d: go down a page
+ctrl + u: go up a page
+vim commands: type ":" and then your command
+:q to quit
+:q! to force quit if you're not sudo accessed.
+:w to save the file
+:wq to save and exit(Like running :w and then hitting enter and then doing :q and then hitting enter again)
+up, down, left right arrows
+i to enter insert mode
+esc to leave insert mode
+optional:
+When not in insert mode but regular command mode(after hitting esc from insert mode):
+w to go through each word. W to go through an entire character word string, before a space.
+b is the same as w but backwards. B is similar to W but backwards.
+Combining commands: dw - deletes the word that you're currently on. Next, hit p to output the yanked text to where your location in vim is. Move around with the arrow keys and ctrl + d or ctrl + u and click p where you want to add the yanked word back into that area.
+Combining commands: yw - yanks the word so you can duplicate it elsewhere
+Combining commands: yy - yanks the word twice so you can put the entire line elsewhere.
+Combining commands: dd - Deletes the entire line and yanks it so you can duplicate it elsewhere. Move around and hit p where you want to add the text back into the area.
+
+There are VERY many keyboard shortcuts in vim which make you an expert in working quickly within the terminal. 
+Not necessary though as you'll mainly be using VSC or some other editor but if you're interested, feel free to research more into it or ask me directly as I'm a vim expert.
+

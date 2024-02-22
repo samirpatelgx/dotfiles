@@ -1,0 +1,81 @@
+## Terminal Shortcuts and Commands
+
+**Copy:** Hold Shift + Ctrl + C to copy
+**Paste:** Hold Shift + Ctrl + V to paste
+
+### Basic Commands
+
+- **sudo \<command\>**: Run a command with administrative privileges.
+  Example: `sudo vim /etc/hosts`
+
+- **cd \<directory\>**: Change directory.
+  - `cd ~/projects/`: Move to the projects directory.
+  - `cd ..`: Move to the parent directory.
+  - `cd ~/`: Move to the home directory.
+
+- **Cancel Command:** Ctrl + C
+- **Show Current Directory:** `pwd`
+- **List Files and Directories:** `ls`
+- **List Detailed Information:** `ls -la`
+
+### File and Directory Operations
+
+- **Create Directory:** `mkdir \<directory\>`
+  - `mkdir ~/projects/my-project`: Create a directory named my-project.
+
+- **Create Nested Directory:** `mkdir -p \<directory\>`
+  - `mkdir -p ~/projects/my-project/react-project/react-components/random-component`: Create nested directories.
+
+- **View File Contents:** `cat \<file\>`
+  - `cat ~/projects/cheat-sheet.txt`
+
+- **Copy File Contents to Clipboard:** `cat \<file\> | xclip -sel c`
+  - Replace \<file\> with the file name.
+
+- **Create Empty File:** `touch \<file\>`
+  - `touch ~/projects/test-text.txt`
+
+- **Delete File:** `rm \<file\>`
+  - `rm ~/projects/test-text.txt`
+
+- **Delete Directory:** `rm -r \<directory\>`
+  - `rm -r ~/projects/my-project/react-project`
+
+### Package Management (Ubuntu)
+
+- **Update Repository:** `sudo apt get update`
+- **Install Application:** `sudo apt get install \<application\>`
+  - Replace \<application\> with the desired application name.
+
+### Auto Completion and Navigation
+
+- **Tab Key:** Auto-completes commands and file paths.
+  Example: `vim ~/pro` + Tab key completes to `~/projects`.
+
+## Sitemills Specific Commands
+
+- **Navigate to Sitemills Directory:**
+  - `cd ~/proj` + Tab key + `sitemills` + Tab key
+
+- **View Directory Structure:** `ls -la`
+
+- **Start Sitemills Services:** `./runAll.sh`
+  - Run in the server directory.
+
+- **Stop Sitemills Services:** `./killAll.sh`
+
+## Tmux (Optional)
+
+- A program for managing multiple terminal sessions.
+
+## Vim (Optional)
+
+- A powerful text editor for the terminal.
+
+- **Open File:** `vim \<file\>`
+  Example: `vim ~/projects/cheat-sheet.txt`
+
+- **Save and Exit:** `:wq`
+
+- **Quit:** `:q` or `:q!` (force quit)
+
